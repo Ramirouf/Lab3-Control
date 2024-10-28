@@ -43,9 +43,8 @@ Glccd = feedback(Glacd,1);
 
 stepplot(0.9*Glccs,0.9*Glccd);
 %% Compensación ZOH
-epsi = 0.175;
-Cz = (2*(z-epsi))/(z+1-2*epsi);
-Gcd2 = Gcd*Cz;
+Cz = 2*z/(z+1);
+Gcd2
 Glacdc = Ks*Ka*Gpd*Gcd2;
 Glccdc = feedback(Glacdc,1);
 stepplot(0.9*Glccs,0.9*Glccdc);
